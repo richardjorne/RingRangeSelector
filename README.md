@@ -20,7 +20,6 @@ If you didn't use Swift Packages, you don't even need to import.
 
 <br>
 
-<CHINESE>
 
 
 ##中文
@@ -78,7 +77,6 @@ If you didn't use Swift Packages, you don't even need to import.
 **Richard Jorne**
 <br><br><br>
 
-<ENGLISH>
 
 
 ##ENGLISH DOCUMENT
