@@ -6,17 +6,12 @@ Ring Range Selector (RRS) empowers SwiftUI with a customizable ring selector. It
 To use RRS, simply import it into your SwiftUI file and then treat it as a 'some View'. 
 要使用RRS，只需在项目中 import RingRangeSelector 并将其当做一个 'some View' 来使用即可。
 
-Initializing RRS requires two Binding: `startProgress` and `endProgress`. The selection area on the screen will always start from `startProgress` and end with `endProgress` clockwisely. Both `startProgress` and `endProgress` need to be between [0,1). The midtop (0'o clock position) always stands for progress 0.0. 
+(English document is below Chinese document)
+
 
 初始化RRS必须提供的是两个Binding，`startProgress` 和 `endProgress`。屏幕上显示的选区永远从`startProgress`开始顺时针直到`endProgress`。`startProgress` 与 `endProgress`均需要在(0,1]之间。屏幕正上方（0点钟方向）永远代表0.0。
 
-If the RRS selection gets changed by an user interaction, it will change the Binding property to a corresponding percentage value. You can also programmatically change the Binding property's value, the change will also be synced to the screen.
-
 如果RRS选区因用户交互而改变，对应的Binding属性也会被改变为对应的百分比。你也可以在代码中改变Binding属性的值，这也会被同步到屏幕上。
-
-
-
-There are a bunch of optional properties you can customize if needed.
 
 在初始化RRS的时候，有很多可选的属性供你自定义。
 
@@ -49,3 +44,11 @@ There are a bunch of optional properties you can customize if needed.
 **祝你使用愉快！**
 
 Richard Jorne
+
+Initializing RRS requires two Binding: `startProgress` and `endProgress`. The selection area on the screen will always start from `startProgress` and end with `endProgress` clockwisely. Both `startProgress` and `endProgress` need to be between [0,1). The midtop (0'o clock position) always stands for progress 0.0. 
+
+If the RRS selection gets changed by an user interaction, it will change the Binding property to a corresponding percentage value. You can also programmatically change the Binding property's value, the change will also be synced to the screen.
+
+There are a bunch of optional properties you can customize if needed.
+
+    RingRangeSelector(ringRadius: <#T##Double#>, strokeWidth: <#T##Double#>, buttonDiameter: <#T##Double#>, shadowRadius: <#T##Double#>, unit: <#T##Double?#>, lineCap: <#T##CGLineCap#>, ringColor: <#T##Color#>, startColor: <#T##Color#>, endColor: <#T##Color#>, backgroundColor: <#T##Color#>, startOverlayImage: <#T##String#>, endOverlayImage: <#T##String#>, startProgress: <#T##Binding<Double>#>, endProgress: <#T##Binding<Double>#>)
