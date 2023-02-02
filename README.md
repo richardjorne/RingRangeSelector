@@ -73,7 +73,7 @@ If you didn't use Swift Packages, you don't even need to import.
 **祝你使用愉快！**
 
 **Richard Jorne**
-<br><br><br><br>
+<br><br>
 
 <ENGLISH>
 
@@ -123,7 +123,7 @@ Another example, if you want to make a 24-hour time selector, you can set this p
 
 
 
-`backgroundColor `stands for the background color of the ring. The section of the ring which is not in the selection will show this color.
+`backgroundColor` stands for the background color of the ring. The section of the ring which is not in the selection will show this color.
 
 
 
