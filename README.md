@@ -6,7 +6,6 @@ Ring Range Selector (RRS) empowers SwiftUI with a customizable ring selector. It
 
 ![](https://github.com/Icelightwww/RingRangeSelector/blob/5e547d89fd323369ef94680360a8dcfddda8e8cf/RingRangeSelectorExample.gif)
 
-
 **!!RRS Installation supports Swift Packages, but I can't figure out whether it really works. If you encounter any strange error, DO NOT use Swift Package and simply copy `/Sources/RingRangeSelector/RingRangeSelector.swift` into your Xcode project. And then you're done with installation.**
 
 **!!RRS可以通过Swift Packages安装，但我也不确定这玩意能不能用。如果你遇到任何奇怪的问题，不要用Swift Packages了，直接把`/Sources/RingRangeSelector/RingRangeSelector.swift`复制一份到你的项目中就行了。人生苦短，何必SPM？**
@@ -17,9 +16,11 @@ If you didn't use Swift Packages, you don't even need to import.
 安装之后，要使用RRS，只需在项目中 import RingRangeSelector 并将其当做一个 'some View' 来使用即可。
 如果你没有用Swift Packages安装，你甚至不需要import :)
 
-(English document is below Chinese document)
+(English document is below the Chinese document)
 
+<br>
 
+<CHINESE>
 
 初始化RRS必须提供的是两个Binding，`startProgress` 和 `endProgress`。屏幕上显示的选区永远从`startProgress`开始顺时针直到`endProgress`。`startProgress` 与 `endProgress`均需要在[0,1)之间。屏幕正上方（0点钟方向）永远代表0.0。
 
@@ -31,7 +32,6 @@ If you didn't use Swift Packages, you don't even need to import.
 
 
     RingRangeSelector(ringRadius: <#T##Double#>, strokeWidth: <#T##Double#>, buttonDiameter: <#T##Double#>, shadowRadius: <#T##Double#>, unit: <#T##Double?#>, lineCap: <#T##CGLineCap#>, ringColor: <#T##Color#>, startColor: <#T##Color#>, endColor: <#T##Color#>, backgroundColor: <#T##Color#>, startOverlayImage: <#T##String#>, endOverlayImage: <#T##String#>, startProgress: <#T##Binding<Double>#>, endProgress: <#T##Binding<Double>#>)
-
 
 `ringRadius`代表环的半径大小，默认为150。实际在屏幕上占用的区域可能会略微大于直径。 **有的时候你可能需要在RingRangeSelector后使用`.frame(width: 2 * ringRadius, height: 2 * ringRadius)`来限制其大小，否则可能显示的样子会不太对劲。** 请注意，RRS永远都是正圆。
 
@@ -71,12 +71,67 @@ If you didn't use Swift Packages, you don't even need to import.
 **祝你使用愉快！**
 
 **Richard Jorne**
-　<br><br><br><br>
+<br><br><br><br>
 
-Initializing RRS requires two Binding: `startProgress` and `endProgress`. The selection area on the screen will ALWAYS start from `startProgress` and end with `endProgress` clockwisely. Both `startProgress` and `endProgress` need to be between [0,1). The midtop (0'o clock position) ALWAYS stands for progress 0.0. 
+<ENGLISH>
+
+Initializing RRS requires two Binding: `startProgress` and `endProgress`. The selection area on the screen will ALWAYS start from `startProgress` and end with `endProgress` clockwise. Both `startProgress` and `endProgress` need to be between [0,1). The mid top (0'o clock position) ALWAYS stands for progress 0.0. 
 
 If the RRS selection gets changed by an user interaction, it will change the Binding property to a corresponding percentage value. You can also programmatically change the Binding property's value, the change will also be synced to the screen.
+
+<br>
 
 There are a bunch of optional properties you can customize if needed.
 
     RingRangeSelector(ringRadius: <#T##Double#>, strokeWidth: <#T##Double#>, buttonDiameter: <#T##Double#>, shadowRadius: <#T##Double#>, unit: <#T##Double?#>, lineCap: <#T##CGLineCap#>, ringColor: <#T##Color#>, startColor: <#T##Color#>, endColor: <#T##Color#>, backgroundColor: <#T##Color#>, startOverlayImage: <#T##String#>, endOverlayImage: <#T##String#>, startProgress: <#T##Binding<Double>#>, endProgress: <#T##Binding<Double>#>)
+
+`ringRadius` stands for the radius of the ring, with a default value of 150. The space the ring actually takes may be slightly larger than the diameter. **Sometimes you may need to put `.frame(width: 2 * ringRadius, height: 2 * ringRadius)` after the RingRangeSelector to limit its size, or else it may look unideally.** Please be aware that RRS is ALWAYS a perfect circle.
+
+
+
+`strokeWidth` stands for the width of the ring, with a default value of 50.
+
+
+
+`buttonDiameter` stands for the diameter of both start button and end button, with a default value of 50. Users change startProgress and endProgress by interacting with these two buttons.
+
+
+
+`shadowRadius` stands for the radius of the shadow of the selected ring section, with a default value of 1.0. Set it to 0.0 to remove the shadow.
+
+
+
+`unit` is an optional value. `unit` stands for how much progress there is in each unit. It is corresponding to the scale. If `unit` is set to 0.1, it means that each unit contains 0.1 progress. Since there is a line(scale) between two units, there will be 10 lines(scale) on the ring.
+
+
+
+Another example, if you want to make a 24-hour time selector, you can set this property to `1.0/24.0`. You can also set it to `nil` to turn off the display of scale.
+
+
+
+`lineCap` is recommended to be set to .butt or .round. The former one makes ends of the ring flat, while the latter one makes them round. This property works along with `buttonDiameter`. Due to some unknown problems, another end of the ring moves back and forth strangely when the user moves one end. Therefore, set this property to .butt and set `buttonDiameter` EQUAL TO `strokeWidth` will make the ring look beautiful. Alternatively, set this property to .round if you want `buttonDiameter` LESS THAN `strokeWidth`, and it will also look good.
+
+
+
+`ringColor` stands for the color of the ring selection.
+
+
+
+`startColor` and `endColor` stands for the color of two draggable buttons at two ends. Those buttons can only be perfect circles and you have no way to modify their shape. I think there's no reason for you to do that.
+
+
+
+`backgroundColor `stands for the background color of the ring. The section of the ring which is not in the selection will show this color.
+
+
+
+`startOverlayImage` and `endOverlayImage` must be filled with SF Symbols image name. Set them to an empty string("") to hide the image. Default is ""(hidden)
+
+
+
+**That's all.**
+
+**Wish you a nice day with Ring Range Selector!**
+
+**Richard Jorne**
+
