@@ -105,7 +105,7 @@ There are a bunch of optional properties you can customize if needed.
 
 
 
-Another example, if you want to make a 24-hour time selector, you can set this property to `1.0/24.0`. You can also set it to `nil` to turn off the display of scale.
+Another example, if you want to make a 24-hour time selector, you can set this property to `1.0/24.0`. You can also set it to `nil` to turn off displaying scale.
 
 
 
