@@ -12,8 +12,10 @@ Ring Range Selector (RRS) empowers SwiftUI with a customizable ring selector. It
 **!!RRS可以通过Swift Packages安装，但我也不确定这玩意能不能用。如果你遇到任何奇怪的问题，不要用Swift Packages了，直接把`/Sources/RingRangeSelector.swift`复制一份到你的项目中就行了。人生苦短，何必SPM？**
 
 After installation, to use RRS, simply import it into your SwiftUI file and then treat it as a 'some View'. 
+If you didn't use Swift Packages, you don't even need to import.
 
 安装之后，要使用RRS，只需在项目中 import RingRangeSelector 并将其当做一个 'some View' 来使用即可。
+如果你没用Swift Packages安装，你甚至不需要import :)
 
 (English document is below Chinese document)
 
