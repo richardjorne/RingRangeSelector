@@ -20,9 +20,9 @@ If you didn't use Swift Packages, you don't even need to import.
 
 <br>
 
+<CHINESE>
 
-
-##中文
+## 中文
 
 初始化RRS必须提供的是两个Binding，`startProgress` 和 `endProgress`。屏幕上显示的选区永远从`startProgress`开始顺时针直到`endProgress`。`startProgress` 与 `endProgress`均需要在[0,1)之间。屏幕正上方（0点钟方向）永远代表0.0。
 
@@ -77,9 +77,9 @@ If you didn't use Swift Packages, you don't even need to import.
 **Richard Jorne**
 <br><br><br>
 
+<ENGLISH>
 
-
-##ENGLISH DOCUMENT
+## ENGLISH DOCUMENT
 
 Initializing RRS requires two Binding: `startProgress` and `endProgress`. The selection area on the screen will ALWAYS start from `startProgress` and end with `endProgress` clockwise. Both `startProgress` and `endProgress` need to be between [0,1). The mid top (0'o clock position) ALWAYS stands for progress 0.0. 
 
