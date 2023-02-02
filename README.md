@@ -72,7 +72,7 @@ After installation, to use RRS, simply import it into your SwiftUI file and then
 
 
 
-Initializing RRS requires two Binding: `startProgress` and `endProgress`. The selection area on the screen will always start from `startProgress` and end with `endProgress` clockwisely. Both `startProgress` and `endProgress` need to be between [0,1). The midtop (0'o clock position) ALWAYS stands for progress 0.0. 
+Initializing RRS requires two Binding: `startProgress` and `endProgress`. The selection area on the screen will ALWAYS start from `startProgress` and end with `endProgress` clockwisely. Both `startProgress` and `endProgress` need to be between [0,1). The midtop (0'o clock position) ALWAYS stands for progress 0.0. 
 
 If the RRS selection gets changed by an user interaction, it will change the Binding property to a corresponding percentage value. You can also programmatically change the Binding property's value, the change will also be synced to the screen.
 
