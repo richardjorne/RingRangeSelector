@@ -61,7 +61,7 @@ To use RRS, simply import it into your SwiftUI file and then treat it as a 'some
 
 **祝你使用愉快！**
 
-Richard Jorne
+**Richard Jorne**
 
 
 
