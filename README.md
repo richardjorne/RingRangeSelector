@@ -3,6 +3,7 @@
 Ring Range Selector (RRS) empowers SwiftUI with a customizable ring selector. It works perfectly with time interval selecting, like selecting sleep time and wake time in iOS, but you can do more as well.
 
 有了RRS，你的SwiftUI又多了个新朋友。环形的选择器完美适配时间段选择，你可以用其模仿iOS就寝功能的睡觉时间和起床时间的选择。当然，你也可以用它来做更多的事情。
+![](https://github.com/Icelightwww/RingRangeSelector/blob/5e547d89fd323369ef94680360a8dcfddda8e8cf/RingRangeSelectorExample.gif)
 
 To use RRS, simply import it into your SwiftUI file and then treat it as a 'some View'. 
 
