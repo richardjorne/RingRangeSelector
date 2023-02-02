@@ -7,21 +7,21 @@ Ring Range Selector (RRS) empowers SwiftUI with a customizable ring selector. It
 ![](https://github.com/Icelightwww/RingRangeSelector/blob/5e547d89fd323369ef94680360a8dcfddda8e8cf/RingRangeSelectorExample.gif)
 
 
-**!!RRS Installation supports Swift Packages, but I can't figure out whether it really works. If you encounter any strange error, DO NOT use Swift Package and simply copy `/Sources/RingRangeSelector.swift` into your Xcode project. And then you're done with installation.**
+**!!RRS Installation supports Swift Packages, but I can't figure out whether it really works. If you encounter any strange error, DO NOT use Swift Package and simply copy `/Sources/RingRangeSelector/RingRangeSelector.swift` into your Xcode project. And then you're done with installation.**
 
-**!!RRS可以通过Swift Packages安装，但我也不确定这玩意能不能用。如果你遇到任何奇怪的问题，不要用Swift Packages了，直接把`/Sources/RingRangeSelector.swift`复制一份到你的项目中就行了。人生苦短，何必SPM？**
+**!!RRS可以通过Swift Packages安装，但我也不确定这玩意能不能用。如果你遇到任何奇怪的问题，不要用Swift Packages了，直接把`/Sources/RingRangeSelector/RingRangeSelector.swift`复制一份到你的项目中就行了。人生苦短，何必SPM？**
 
 After installation, to use RRS, simply import it into your SwiftUI file and then treat it as a 'some View'. 
 If you didn't use Swift Packages, you don't even need to import.
 
 安装之后，要使用RRS，只需在项目中 import RingRangeSelector 并将其当做一个 'some View' 来使用即可。
-如果你没用Swift Packages安装，你甚至不需要import :)
+如果你没有用Swift Packages安装，你甚至不需要import :)
 
 (English document is below Chinese document)
 
 
 
-初始化RRS必须提供的是两个Binding，`startProgress` 和 `endProgress`。屏幕上显示的选区永远从`startProgress`开始顺时针直到`endProgress`。`startProgress` 与 `endProgress`均需要在(0,1]之间。屏幕正上方（0点钟方向）永远代表0.0。
+初始化RRS必须提供的是两个Binding，`startProgress` 和 `endProgress`。屏幕上显示的选区永远从`startProgress`开始顺时针直到`endProgress`。`startProgress` 与 `endProgress`均需要在[0,1)之间。屏幕正上方（0点钟方向）永远代表0.0。
 
 
 如果RRS选区因用户交互而改变，对应的Binding属性也会被改变为对应的百分比。你也可以在代码中改变Binding属性的值，这也会被同步到屏幕上。
