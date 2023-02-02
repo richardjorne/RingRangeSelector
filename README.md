@@ -24,7 +24,7 @@ To use RRS, simply import it into your SwiftUI file and then treat it as a 'some
     RingRangeSelector(ringRadius: <#T##Double#>, strokeWidth: <#T##Double#>, buttonDiameter: <#T##Double#>, shadowRadius: <#T##Double#>, unit: <#T##Double?#>, lineCap: <#T##CGLineCap#>, ringColor: <#T##Color#>, startColor: <#T##Color#>, endColor: <#T##Color#>, backgroundColor: <#T##Color#>, startOverlayImage: <#T##String#>, endOverlayImage: <#T##String#>, startProgress: <#T##Binding<Double>#>, endProgress: <#T##Binding<Double>#>)
 
 
-`ringRadius`代表环的半径大小，默认为150。实际在屏幕上占用的区域可能会略微大于直径。**有的时候你可能需要在RingRangeSelector后使用`.frame(width: 2 * ringRadius, height: 2 * ringRadius)`来限制其大小，否则可能显示的样子会不太对劲。**请注意，RRS永远都是正圆。
+`ringRadius`代表环的半径大小，默认为150。实际在屏幕上占用的区域可能会略微大于直径。 **有的时候你可能需要在RingRangeSelector后使用`.frame(width: 2 * ringRadius, height: 2 * ringRadius)`来限制其大小，否则可能显示的样子会不太对劲。** 请注意，RRS永远都是正圆。
 
 
 `strokeWidth`代表环的粗细。默认为50。我没试过如果小于0会怎么样，我感觉一般人也不会去试www
