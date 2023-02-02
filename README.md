@@ -65,6 +65,8 @@ If you didn't use Swift Packages, you don't even need to import.
 
 `startOverlayImage`和`endOverlayImage`中须填写SF Symbols的名字。默认为空（不显示）。手动设为空字符串（""）即可不显示。
 
+我还准备了一个使用案例，如gif所示。案例源代码在根目录下的`RingRangeSelectorExample.swift`中。
+
 
 **以上。**
 
@@ -109,7 +111,7 @@ Another example, if you want to make a 24-hour time selector, you can set this p
 
 
 
-`lineCap` is recommended to be set to .butt or .round. The former one makes ends of the ring flat, while the latter one makes them round. This property works along with `buttonDiameter`. Due to some unknown problems, another end of the ring moves back and forth strangely when the user moves one end. Therefore, set this property to .butt and set `buttonDiameter` EQUAL TO `strokeWidth` will make the ring look beautiful. Alternatively, set this property to .round if you want `buttonDiameter` LESS THAN `strokeWidth`, and it will also look good.
+`lineCap` is recommended to be set to .butt or .round. The former one makes ends of the ring flat, while the latter one makes them round. This property works along with `buttonDiameter`. Due to some unknown problems, another end of the ring moves back and forth strangely when the user moves one end. Therefore, set this property to .butt and set `buttonDiameter` EQUAL TO `strokeWidth` to make the ring look beautiful, and the user won't see the movement of the ends of the ring. Alternatively, set this property to .round if you want `buttonDiameter` LESS THAN `strokeWidth`, and it will also look good.
 
 
 
@@ -126,6 +128,8 @@ Another example, if you want to make a 24-hour time selector, you can set this p
 
 
 `startOverlayImage` and `endOverlayImage` must be filled with SF Symbols image name. Set them to an empty string("") to hide the image. Default is ""(hidden)
+
+I've also prepared an example, which is also the content of the gif, using RRS. The example is in the `RingRangeSelectorExample.swift` in the root directory.
 
 
 
