@@ -7,7 +7,7 @@ Ring Range Selector (RRS) empowers SwiftUI with a customizable ring selector. It
 ![](https://github.com/Icelightwww/RingRangeSelector/blob/5e547d89fd323369ef94680360a8dcfddda8e8cf/RingRangeSelectorExample.gif)
 
 
-**!!RRS Installation supports Swift Packages, but I can't figure out whether it really works. If you encounter any strange error, don't use Swift Package and simply copy `/Sources/RingRangeSelector.swift` into your Xcode project. And then you're done with installation.**
+**!!RRS Installation supports Swift Packages, but I can't figure out whether it really works. If you encounter any strange error, DO NOT use Swift Package and simply copy `/Sources/RingRangeSelector.swift` into your Xcode project. And then you're done with installation.**
 
 **!!RRS可以通过Swift Packages安装，但我也不确定这玩意能不能用。如果你遇到任何奇怪的问题，不要用Swift Packages了，直接把`/Sources/RingRangeSelector.swift`复制一份到你的项目中就行了。人生苦短，何必SPM？**
 
@@ -72,7 +72,7 @@ After installation, to use RRS, simply import it into your SwiftUI file and then
 
 
 
-Initializing RRS requires two Binding: `startProgress` and `endProgress`. The selection area on the screen will always start from `startProgress` and end with `endProgress` clockwisely. Both `startProgress` and `endProgress` need to be between [0,1). The midtop (0'o clock position) always stands for progress 0.0. 
+Initializing RRS requires two Binding: `startProgress` and `endProgress`. The selection area on the screen will always start from `startProgress` and end with `endProgress` clockwisely. Both `startProgress` and `endProgress` need to be between [0,1). The midtop (0'o clock position) ALWAYS stands for progress 0.0. 
 
 If the RRS selection gets changed by an user interaction, it will change the Binding property to a corresponding percentage value. You can also programmatically change the Binding property's value, the change will also be synced to the screen.
 
