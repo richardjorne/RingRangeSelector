@@ -20,7 +20,7 @@ If you didn't use Swift Packages, you don't even need to import.
 安装之后，要使用RRS，只需在项目中 import RingRangeSelector 并将其当做一个 'some View' 来使用即可。
 如果你没有用Swift Packages安装，你甚至不需要import :)
 
-(English Document)[#english]
+[English Document](#english)
 
 <br>
 
@@ -82,9 +82,9 @@ If you didn't use Swift Packages, you don't even need to import.
 <br><br><br>
 
 <ENGLISH>
-<span id="english">English Document</span>
 
-## ENGLISH DOCUMENT
+
+<span id="english">## ENGLISH DOCUMENT</span>
 
 Initializing RRS requires two Binding: `startProgress` and `endProgress`. The selection area on the screen will ALWAYS start from `startProgress` and end with `endProgress` clockwise. Both `startProgress` and `endProgress` need to be between [0,1). The mid top (0'o clock position) ALWAYS stands for progress 0.0. 
 
